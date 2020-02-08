@@ -1,22 +1,5 @@
 <form [formGroup]="cardForm">
-  <input type="text" formControlName="name" />
-  <ng-container
-    *ngIf="
-      cardForm.controls.name.dirty &&
-      cardForm.controls.name.touched &&
-      cardForm.controls.name.errors
-    "
-  >
-    <div *ngIf="cardForm.controls.name.errors.required">
-      Name is required.
-    </div>
-    <div *ngIf="cardForm.controls.name.errors.minlength">
-      The value your entered is
-      {{ cardForm.controls.name.errors.minlength.actualLength }}
-      characters long, but it must be at least
-      {{ cardForm.controls.name.errors.minlength.requiredLength }}
-    </div>
-  </ng-container>
+  <app-input [control]="cardForm.get('name')"></app-input>
 </form>
 <hr />
 <div>Form Contents: {{ cardForm.value | json }}</div>
