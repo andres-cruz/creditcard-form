@@ -15,6 +15,7 @@
   <button class="button is-primary" type="submit" [disabled]="cardForm.invalid">
     Submit
   </button>
+  <button class="button is-warning" type="button" (click)="onResetClick()">Reset</button>
 </form>
 <hr />
 <div>Form Contents: {{ cardForm.value | json }}</div>
