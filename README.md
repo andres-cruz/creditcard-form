@@ -19,7 +19,7 @@ $ ng serve -o
 
 ### Features:
 
-The app display instantaneous feedback as the user fills out the form.
+The app displays instantaneous feedback as the user fills out the form.
 
 - It implements Angular reactive forms functionality
 - Reusable input field & customized inputs validations
